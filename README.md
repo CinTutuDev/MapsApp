@@ -24,3 +24,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ### También estos pasos, son conocidos como Hooks, que posiblemente haz escuchado en React, pero funcionan diferente, pero comparten la similitud de que son Métodos (o funciones) que se ejecutan cuando algo sucede en un componente.
 
+## 🎱 URL Importantes
+### Diseño 👉 :  [Bootstrap](https://getbootstrap.com/) 
+### Map Box 👉  : [MapBox](https://www.mapbox.com/) 
+
