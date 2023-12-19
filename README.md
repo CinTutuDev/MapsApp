@@ -22,7 +22,33 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ### Esta sección está enfocada en hablar y explicar todos los pasos del ciclo de vida de un componente (también se aplican a las directivas que veremos después).
 
-### También estos pasos, son conocidos como Hooks, que posiblemente haz escuchado en React, pero funcionan diferente, pero comparten la similitud de que son Métodos (o funciones) que se ejecutan cuando algo sucede en un componente.
+1. ### Este es un breve listado de los temas fundamentales:
+
+2. ### Manejo de librerías escritas en JavaScript en TypeScript
+
+3. ### Uso de Mapas basados en Mapbox (el API es similar a la de Google Maps)
+
+4. ### Marcadores
+
+5. ### Eventos
+
+6. ### FlyTo
+
+7. ### Coordenadas geográficas
+
+8. ### Componentes para re-utilización de mapas
+
+9. ### Mantener objetos de forma persistente
+
+10. ### @types
+
+11. ### Zoom
+
+12. ### Range
+
+13. ### Y más
+
+#### Aunque el uso de mapas no es algo directamente relacionado con Angular, ya que todo se realiza mediante un objeto de una librería de terceros, en este caso Mapbox, es interesante comprender cómo funcionan esas librerías dentro de Angular y cómo poder tener control de los objetos como si fueran propiedades de nuestras clases.
 
 ## 🎱 URL Importantes
 ### Diseño 👉 :  [Bootstrap](https://getbootstrap.com/) 
