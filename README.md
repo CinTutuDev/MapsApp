@@ -1,27 +1,30 @@
-# MapsApp
+<p align="center"> 
+ <img src="src/assets/ubicacion.png" width="6%">
+</p>
+<p align="center"> 
+<img src="https://readme-typing-svg.demolab.com?font=Pixel Emulator&size=40&color=003366&center=true&vCenter=true&width=940&lines=  Maps App" align="middle" alt=""  width="80%"/>
+</p>
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+##  🐦Development server
 
-## Code scaffolding
+Ejecutar `ng serve` ó `ng s -o`para un servidor de desarrollo. Navegue a `http://localhost:4200/
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+## 🛠 Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+## 🧩 Resumen de lo que he aprendido en esta sección
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Esta sección está enfocada en hablar y explicar todos los pasos del ciclo de vida de un componente (también se aplican a las directivas que veremos después).
 
-## Running end-to-end tests
+### También estos pasos, son conocidos como Hooks, que posiblemente haz escuchado en React, pero funcionan diferente, pero comparten la similitud de que son Métodos (o funciones) que se ejecutan cuando algo sucede en un componente.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## 🎱 URL Importantes
+### Diseño 👉 :  [Bootstrap](https://getbootstrap.com/) 
+### Map Box 👉  : [MapBox](https://www.mapbox.com/) 
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
