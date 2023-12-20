@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MapsLayoutComponent } from './layout/maps-layout/maps-layout.component';
-import { MapsLayoutfullScreenPageComponent } from './pages/maps-layoutfull-screen-page/maps-layoutfull-screen-page.component';
 import { ZoomRagePageComponent } from './pages/zoom-rage-page/zoom-rage-page.component';
 import { MarkersPageComponent } from './pages/markers-page/markers-page.component';
 import { PropertiesPageComponent } from './pages/properties-page/properties-page.component';
+import { FullScreenPageComponent } from './pages/full-screen-page/full-screen-page.component';
 
 const routes: Routes = [
   {
@@ -13,7 +13,7 @@ const routes: Routes = [
     children: [
       {
         path: 'fullscreen',
-        component: MapsLayoutfullScreenPageComponent,
+        component: FullScreenPageComponent,
       },
       {
         path: 'zoom-rage',

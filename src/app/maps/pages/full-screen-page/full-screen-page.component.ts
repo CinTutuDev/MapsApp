@@ -1,10 +1,11 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { Map } from 'mapbox-gl'; // or "const mapboxgl = require('mapbox-gl');"
+
 @Component({
-  templateUrl: './zoom-rage-page.component.html',
-  styleUrls: ['./zoom-rage-page.component.scss'],
+  templateUrl: './full-screen-page.component.html',
+  styleUrls: ['./full-screen-page.component.scss'],
 })
-export class ZoomRagePageComponent implements AfterViewInit {
+export class FullScreenPageComponent implements AfterViewInit {
   @ViewChild('map') divMap?: ElementRef;
 
   ngAfterViewInit(): void {
