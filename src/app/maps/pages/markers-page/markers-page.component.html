@@ -2,16 +2,15 @@
 
 <ul class="list-group">
   <li
-
     [routerLink]=""
     routerLinkActive="active"
     class="list-group-item list-group-item-info"
   >
-  Marker
-  <!--   {{ i.name }} -->
+    Marker
+    <!--   {{ i.name }} -->
   </li>
 </ul>
 
-<button class="btnMarker">
+<button (click)="createMarker()" class="btnMarker">
   + Agregar un marcador
 </button>
