@@ -17,11 +17,12 @@ button:hover {
   color: #cff4fc;
   border: 1px solid #055160;
 }
-.list-group{
+.list-group {
   position: fixed;
   top: 20px;
   right: 20px;
   cursor: pointer;
-
-
+  li {
+    color: #cff4fc;
+  }
 }
