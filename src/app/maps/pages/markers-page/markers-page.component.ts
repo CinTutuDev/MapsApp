@@ -1,3 +1,4 @@
+import { JsonPipe } from '@angular/common';
 import { Component, ElementRef, ViewChild } from '@angular/core';
 
 import { LngLat, Map, Marker } from 'mapbox-gl';
@@ -7,6 +8,11 @@ interface MarkerAndColors {
   marker: Marker;
 }
 
+interface PlainMarker {
+  color: string;
+  lngLat: number[];
+}
+
 @Component({
   templateUrl: './markers-page.component.html',
   styleUrls: ['./markers-page.component.scss'],
@@ -14,7 +20,7 @@ interface MarkerAndColors {
 export class MarkersPageComponent {
   public markers: MarkerAndColors[] = [];
 
-  public zoom: number = 13;
+  public zoom: number = 40;
   public map?: Map;
   public currentLngLat: LngLat = new LngLat(
     -4.461836858435845,
@@ -33,6 +39,8 @@ export class MarkersPageComponent {
       center: this.currentLngLat, // starting position [lng, lat]
       zoom: this.zoom, // starting zoom
     });
+
+    this.readFromLocalStorage();
 
     const markerHtml = document.createElement('div');
     markerHtml.innerHTML = 'CinTutuDev';
@@ -68,6 +76,9 @@ export class MarkersPageComponent {
       color,
       marker,
     });
+    this.saveToLocalStorage();
+
+    marker.on('dragend', () => this.saveToLocalStorage());
   }
 
   deleteMarker(index: number) {
@@ -80,5 +91,29 @@ export class MarkersPageComponent {
       zoom: 14,
       center: marker.getLngLat(),
     });
+  }
+
+  saveToLocalStorage() {
+    const plainMarkers: PlainMarker[] = this.markers.map(
+      ({ color, marker }) => {
+        return {
+          color,
+          lngLat: marker.getLngLat().toArray(),
+        };
+      }
+    );
+    localStorage.setItem('plainMarkers', JSON.stringify(plainMarkers));
+  }
+
+  readFromLocalStorage() {
+    const plainMarkersString = localStorage.getItem('plainMarkers') ?? '[]';
+    const plainMarkers: PlainMarker[] = JSON.parse(plainMarkersString);
+    plainMarkers.forEach(({ color, lngLat }) => {
+      const [lng, lat] = lngLat;
+      const coords = new LngLat(lng, lat);
+
+      this.addMarker(coords, color);
+    });
+    console.log(plainMarkers);
   }
 }
