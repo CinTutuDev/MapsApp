@@ -1,9 +1,37 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
+import { LngLat, Map, Marker } from 'mapbox-gl';
 @Component({
   templateUrl: './markers-page.component.html',
-  styleUrls: ['./markers-page.component.scss']
+  styleUrls: ['./markers-page.component.scss'],
 })
 export class MarkersPageComponent {
+  public zoom: number = 13;
+  public map?: Map;
+  public currentLngLat: LngLat = new LngLat(
+    -4.461836858435845,
+    40.31791851561749
+  );
 
+  @ViewChild('map') divMap?: ElementRef;
+
+  ngAfterViewInit(): void {
+    if (!this.divMap) throw 'El elemento HTML no fue encontrado';
+
+    console.log(this.divMap);
+    this.map = new Map({
+      container: this.divMap.nativeElement, // container ID
+      style: 'mapbox://styles/mapbox/streets-v12', // style URL
+      center: this.currentLngLat, // starting position [lng, lat]
+      zoom: this.zoom, // starting zoom
+    });
+
+    const markerHtml = document.createElement('div');
+    markerHtml.innerHTML = 'CinTutuDev'
+
+    const marker = new Marker({
+      color: 'red',
+     /*  element: markerHtml */
+    }).setLngLat(this.currentLngLat).addTo(this.map);
+  }
 }
