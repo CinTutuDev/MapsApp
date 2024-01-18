@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CounterAloneComponent } from 'src/app/alone/components/counter-alone/counter-alone.component';
 
 interface House {
   title: string;
@@ -6,6 +7,7 @@ interface House {
   lngLat: [number,number];
 }
 @Component({
+
   templateUrl: './properties-page.component.html',
   styleUrls: ['./properties-page.component.scss'],
 })
