@@ -20,7 +20,7 @@ interface PlainMarker {
 export class MarkersPageComponent {
   public markers: MarkerAndColors[] = [];
 
-  public zoom: number = 40;
+  public zoom: number = 10;
   public map?: Map;
   public currentLngLat: LngLat = new LngLat(
     -4.461836858435845,
@@ -51,6 +51,7 @@ export class MarkersPageComponent {
     })
       .setLngLat(this.currentLngLat)
       .addTo(this.map);
+
   }
 
   createMarker() {

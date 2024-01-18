@@ -1,25 +1,35 @@
-<div class="row mt-3">
-  <div class="col-2"></div>
-  <div class="col">
-    <h3>Listado de propiedades</h3>
-    <hr />
+ng <div class="container mt-3">
+  <div class="row">
+    <div class="col">
+      <h3 class="text-center">Listado de propiedades</h3>
+      <hr />
+    </div>
   </div>
-</div>
 
-<div class="row mt-2">
-  <div class="col-2"></div>
-  <div class="col">
-    <div class="row">
-      <!-- Houses -->
-      <div *ngFor="let house of houses" class="col-4 mb-2">
-        <div class="card">
-          <img src="..." class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title">{{ house.title }}</h5>
-            <p class="card-text">
-              {{house.description}}
-            </p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+  <div class="row mt-2">
+    <div class="col">
+      <div class="row">
+        <!-- Houses -->
+        <div
+          *ngFor="let house of houses"
+          class="col-lg-4 col-md-6 col-sm-12 mb-2"
+        >
+          <div class="card-group">
+            <div class="card w-75 border-primary">
+              <!-- <img src="..." class="card-img-top" alt="..." /> -->
+              <map-mini-map [lngLat]="house.lngLat" class="card-img-top" />
+              <div class="card-body">
+                <h5 class="card-title text-sm-center">{{ house.title }}</h5>
+                <p class="card-text">
+                  {{ house.description }}
+                </p>
+                <p class="card-text">
+                  {{ house.lngLat }}
+                </p>
+                <!-- <a [href]="{{house.lngLat}}" class="btn btn-primary">Go somewhere</a> -->
+                <!-- <a [href]="house.lngLat" class="btn btn-primary" target="_blank">Go somewhere</a> -->
+              </div>
+            </div>
           </div>
         </div>
       </div>
